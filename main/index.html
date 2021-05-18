@@ -7,11 +7,62 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css">
 
-    <title>Hello, world!</title>
+    <title>Dawson Abner</title>
   </head>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+      <a class="navbar-brand mb-0 h1" href="#">Dawson Abner</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <%= link_to "Check-Ins", home_index_path(uid: current_member.id, desired_date: Date.today.to_s), :class => "nav-link active"%>
+          </li>
+          <li class="nav-item">
+            <%= link_to "My Group", group_index_path, :class => "nav-link"%>
+          </li>
+          <li class="nav-item">
+              <%= link_to "My Data", data_index_path, :class => "nav-link"%>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Homework", homework_index_path, :class => "nav-link"%>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav pr-3">
+          <%= link_to "Edit profile", edit_member_path(current_member), :class => "btn btn-warning" %>
+        </ul>
+        <%if current_member.superUser %>
+          <ul class="nav navbar-nav pr-3">
+            <%= link_to "Show all users", members_path, :class => "btn btn-warning" %>
+          </ul>
+        <% end %> 
+        <ul class="nav navbar-nav">
+          <%= link_to "Log out", logout_path, method: :delete, :class => "btn btn-outline-danger" %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <body>
-    <h1>Hello, world!</h1>
+      <div class="row">
+          <div class="col-6">
+            <h1>Dawson Abner</h1>
+            <h2>(214)-606-7297 | dawsonabner@gmail.com</h2>
+            <img src= "dawsonabnerheadshot.jpg", class = "img-fluid", alt = "Dawson Abner Headshot", width="500", height="600"> 
+          </div>
+
+          <div class="col-6">
+              <p>Howdy! My Name is Dawson Abner and I am a senior Computer Science student at Texas A&M University, minoring in Game Design and Development. My hobbies include working out, dancing, and reading.</p>
+              <p>Because I have been playing video games since I was a child, I've taken a deep interest in game development, which led me to pursue the major and minor that I am. However, throughout college I have gotten more involved with Esports, specifically Super Smash Brothers, and all of the work that goes into it behind the scenes. This has led me to pursue a career in web and software development, so that I am able to work on fulfilling projects that will help the Esports ecosystem grow.</p>
+              <p></p>
+          </div>
+      </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
