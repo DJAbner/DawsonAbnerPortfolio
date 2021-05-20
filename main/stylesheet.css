@@ -20,3 +20,13 @@ img {
     margin-left: 50px;
     margin-top: 20px;
 }
+
+html, body, div{
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+}
+
+a {
+    margin-left: 50px;
+}

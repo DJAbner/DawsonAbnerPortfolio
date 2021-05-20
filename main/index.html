@@ -15,35 +15,19 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
     <div class="container-fluid">
-      <a class="navbar-brand mb-0 h1" href="#">Dawson Abner</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <%= link_to "Check-Ins", home_index_path(uid: current_member.id, desired_date: Date.today.to_s), :class => "nav-link active"%>
           </li>
           <li class="nav-item">
-            <%= link_to "My Group", group_index_path, :class => "nav-link"%>
           </li>
           <li class="nav-item">
-              <%= link_to "My Data", data_index_path, :class => "nav-link"%>
           </li>
           <li class="nav-item">
-            <%= link_to "Homework", homework_index_path, :class => "nav-link"%>
           </li>
-        </ul>
-        <ul class="nav navbar-nav pr-3">
-          <%= link_to "Edit profile", edit_member_path(current_member), :class => "btn btn-warning" %>
-        </ul>
-        <%if current_member.superUser %>
-          <ul class="nav navbar-nav pr-3">
-            <%= link_to "Show all users", members_path, :class => "btn btn-warning" %>
-          </ul>
-        <% end %> 
-        <ul class="nav navbar-nav">
-          <%= link_to "Log out", logout_path, method: :delete, :class => "btn btn-outline-danger" %>
         </ul>
       </div>
     </div>
@@ -60,7 +44,13 @@
           <div class="col-6">
               <p>Howdy! My Name is Dawson Abner and I am a senior Computer Science student at Texas A&M University, minoring in Game Design and Development. My hobbies include working out, dancing, and reading.</p>
               <p>Because I have been playing video games since I was a child, I've taken a deep interest in game development, which led me to pursue the major and minor that I am. However, throughout college I have gotten more involved with Esports, specifically Super Smash Brothers, and all of the work that goes into it behind the scenes. This has led me to pursue a career in web and software development, so that I am able to work on fulfilling projects that will help the Esports ecosystem grow.</p>
-              <p></p>
+              <p>By joining Texas A&M Esports (an on-campus organization centered around competing in and running events for a variety of video games), I have been able to explore my interest in Esports further by getting involved with a diverse and welcoming community. Not only was I able to compete on the Super Smash Brothers Ultimate Collegiate Team, but I also had the opportunity of becoming an Team Lead for the Super Smash Brothers Ultimate division. This allowed me to learn more about running events and moderating communities as I helped administrate in person events, online events, and community chat rooms like Discord. I have also worked as an Intramural Esports Assistant for Texas A&M Rec Sports, where I help to create Esports events and foster a diverse community for the entire university.</p>
+              <p>Below are links to my Resume, LinkedIn profile, and Github, where you can find my work. You can also check out an overview of my projects and experience in the navigation bar.</p>
+              <div>
+                  <a href= "DawsonAbnerResume_2021.pdf">Resume</a>
+                  <a href= "https://www.linkedin.com/in/dawson-abner-998551167/">LinkedIn</a>
+                  <a href= "https://github.com/DJAbner">Github</a>
+              </div>
           </div>
       </div>
 
