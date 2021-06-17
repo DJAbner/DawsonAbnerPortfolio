@@ -33,6 +33,7 @@ p {
 img {
     margin-left: 50px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 html, body, div{
@@ -43,4 +44,15 @@ html, body, div{
 
 a {
     margin-left: 50px;
+}
+
+iframe {
+    width: 600px;
+    height: 400px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+body {
+    margin-bottom: 50px;
 }
