@@ -36,7 +36,7 @@ img {
     margin-bottom: 20px;
 }
 
-html, body, div{
+html, body, div.row{
     margin: 0 !important;
     padding: 0 !important;
     width: 100%;
@@ -60,5 +60,10 @@ body {
 
 nav .navbar-nav li a {
     color: white;
+}
+
+.row {
+    padding-right: 0px;
+    margin-right: 0px;
 }
 
