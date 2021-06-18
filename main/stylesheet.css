@@ -1,5 +1,5 @@
 h1 {
-    color: #421616;
+    color: #800000;
     margin-left: 50px;
     margin-top: 20px;
 }
@@ -55,4 +55,10 @@ iframe {
 
 body {
     margin-bottom: 50px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+nav .navbar-nav li a {
+    color: white;
+}
+
